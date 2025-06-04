@@ -24,8 +24,7 @@ private:
 
 
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override {
-        ml::RectangleButton::draw(target, states);
-
+        // Drawing valid/invalid based on input
         if(!str.empty() && valid){
             sf::Text text(ml::FontManager::getDefault(), "valid");
             text.setPosition({position.x, position.y});
